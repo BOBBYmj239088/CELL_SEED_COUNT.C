@@ -70,15 +70,15 @@ int seed_prefer;
 printf("\n Which Assay Plate you want to seed in?:\n ");
 printf("\n Type '1' to '6' for preferences.\n");
 printf("\n '1' FOR 6-WELL PLATE  \n");
-printf(GRN "\n     [TOT.VOL:3.0uL & SEED.DENS:0.3×10^6 CELLS]\n" RESET);
+printf(GRN "\n     [TOT.VOL:3000.00 uL & SEED.DENS:0.3×10^6 CELLS]\n" RESET);
 printf("\n '2' FOR 12-WELL PLATE \n");
-printf(GRN "\n     [TOT.VOL:2.0uL & SEED.DENS:0.1×10^6 CELLS]\n" RESET);
+printf(GRN "\n     [TOT.VOL:2000.00 uL & SEED.DENS:0.1×10^6 CELLS]\n" RESET);
 printf("\n '3' FOR 24-WELL PLATE \n");
-printf(GRN "\n     [TOT.VOL:1.0uL & SEED.DENS:0.05×10^6 CELLS]\n" RESET);
+printf(GRN "\n     [TOT.VOL:1000.00 uL & SEED.DENS:0.05×10^6 CELLS]\n" RESET);
 printf("\n '4' FOR 48-WELL PLATE \n");
-printf(GRN "\n     [TOT.VOL:0.4uL & SEED.DENS:0.03×10^6 CELLS]\n" RESET);
+printf(GRN "\n     [TOT.VOL:500.00 uL & SEED.DENS:0.03×10^6 CELLS]\n" RESET);
 printf("\n '5' FOR 96-WELL PLATE \n");
-printf(GRN "\n     [TOT.VOL:0.2uL & SEED.DENS:0.01×10^6 CELLS]\n" RESET);
+printf(GRN "\n     [TOT.VOL:200.0 uL & SEED.DENS:0.01×10^6 CELLS]\n" RESET);
 printf("\n '6' FOR OTHER PLATE/FLASK SETTINGS \n");
 scanf("%d",&seed_prefer);
 
@@ -310,7 +310,7 @@ else if(seed_prefer==3)//24 well
 {
 printf(GRN "\n ## You have chosen for 24-Well Assay Plate ##\n" RESET);
 well_vol=1000;
-seed_dens=0.5;
+seed_dens=0.05;
 tot_no_wells=24;
 
 cell_dens_well=(well_vol*seed_dens)/tot_count_mil;
@@ -419,7 +419,7 @@ else if(seed_prefer==4)//48 well
 
 {
 printf(GRN "\n ## You have chosen for 48-Well Assay Plate ##\n" RESET);
-well_vol=0.400;
+well_vol=500;
 seed_dens=0.03;
 tot_no_wells=48;
 
